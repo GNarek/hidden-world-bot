@@ -21,18 +21,20 @@ const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 const FEEDS = [
+  "https://www.wired.com/feed/rss",
   "https://www.huffpost.com/section/weird-news/feed",
-  "https://www.theonion.com/rss",
-  "https://www.cracked.com/rss",
-  "https://reductress.com/feed",
-  "https://www.betootaadvocate.com/feed",
-  "https://www.thepoke.co.uk/feed",
-  "https://www.thedailymash.co.uk/feed",
-  "https://newsbiscuit.com/feed",
-  "https://babylonbee.com/feed",
-  "https://newsthump.com/feed",
-  "https://boingboing.net/feed/",
-  "https://www.oddee.com/feed/",
+  "https://anomalien.com/feed/",
+  // "https://www.theonion.com/rss", // not mystery
+  // "https://www.cracked.com/crackedrss/allposts.xml", ,  // not mystery but interesting
+  // "https://reductress.com/feed",  // not mystery
+  // "https://www.betootaadvocate.com/feed",   // not mystery
+  // "https://www.thepoke.co.uk/feed", // not mystery
+  // "https://www.thedailymash.co.uk/feed",  // not mystery
+  // "https://newsbiscuit.com/feed",  // not mystery
+  // "https://babylonbee.com/feed",  // not mystery
+  // "https://newsthump.com/feed",  // not mystery
+  // "https://boingboing.net/feed/",   // not mystery
+  // "https://www.oddee.com/feed/",  // not mystery but weird
 ];
 
 const parser = new Parser();

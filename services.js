@@ -8,9 +8,9 @@ const chooseMostInterestingArticle = async (articles) => {
   const list = articles.map((a, i) => `${i + 1}. ${a.title}`).join("\n");
 
   const prompt = `
-You are a curious and sharp editor. Here is a list of article titles from weird news sources.
+You are a curious and sharp editor. Here is a list of article titles from mystery news sources.
 
-Choose the one that is the most interesting, strange, curiosity-triggering, or attention-grabbing — the one that would get the most clicks on Facebook.
+Choose the one that is the most interesting, mystery, curiosity-triggering, or attention-grabbing — the one that would get the most clicks on Facebook.
 
 ONLY reply with the number of the most interesting one. Do not explain your choice. Just give the number.
 
