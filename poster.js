@@ -65,7 +65,9 @@ const collectAllArticles = async (postedLinks) => {
   console.log("🧠 Chosen:", chosen.title);
 
   const fullText = await fetchArticleText(chosen.link);
+  const hashtags = "#WeirdNews #HiddenWorld #StrangeButTrue #DailyCuriosity";
   const message = await summarizeWithGPT(fullText);
+  const messageWithTags = +"\n\n\n\n\n\n\n\n" + hashtags;
 
   let imageToPost = await extractOpenGraphImage(chosen.link);
   if (!imageToPost) {
@@ -74,7 +76,7 @@ const collectAllArticles = async (postedLinks) => {
   }
 
   const postId = await postPhotoToFacebook(
-    message,
+    messageWithTags,
     imageToPost,
     PAGE_ID,
     PAGE_ACCESS_TOKEN
