@@ -21,9 +21,11 @@ const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 const FEEDS = [
-  "https://www.wired.com/feed/rss",
-  "https://www.huffpost.com/section/weird-news/feed",
-  "https://anomalien.com/feed/",
+  "https://www.azatutyun.am/api/zqtvml-vomx-tpeiok_",
+  // "https://www.wired.com/feed/rss",
+  // "https://www.huffpost.com/section/weird-news/feed",
+  // "https://anomalien.com/feed/",
+
   // "https://www.theonion.com/rss", // not mystery
   // "https://www.cracked.com/crackedrss/allposts.xml", ,  // not mystery but interesting
   // "https://reductress.com/feed",  // not mystery
@@ -67,7 +69,7 @@ const collectAllArticles = async (postedLinks) => {
   const fullText = await fetchArticleText(chosen.link);
   const hashtags = "#WeirdNews #HiddenWorld #StrangeButTrue #DailyCuriosity";
   const message = await summarizeWithGPT(fullText);
-  const messageWithTags = +"\n\n\n\n\n\n\n\n" + hashtags;
+  const messageWithTags = `${message}\n\n\n\n\n\n\n\n${hashtags}`;
 
   let imageToPost = await extractOpenGraphImage(chosen.link);
   if (!imageToPost) {
